@@ -1,131 +1,56 @@
-# [💻 LiveTerm - build terminal styled websites in minutes!](https://liveterm.vercel.app)
+# Personal Portfolio - Terminal Style
 
-Highly customizable, easy-to-use, and minimal terminal styled website template, powered by Next.js.
+Welcome to my personal portfolio, a creative digital space crafted to resemble a terminal interface. It is inspired by the innovative project [LiveTerm](https://github.com/Cveinnt/LiveTerm), and I've added my own twist to it.
 
-Building a simple website with LiveTerm only takes **minutes**, and you only need to work with **one** file: `config.json`. After you cloned this repository, simply run `yarn install && yarn dev` and start editing `config.json` to build your website!
+## Overview
 
-LiveTerm can be used to build a variety of websites:
+This portfolio is an interactive way to explore my work, skills, and projects. Designed to emulate the look and feel of a real terminal, users can navigate through the content by typing commands, just like in a real shell environment.
 
-- [personal website](https://cveinnt.com)
-- [browser startpage](https://livetermstart.vercel.app/)
-- [project page](https://liveterm.vercel.app/)
-- or maybe just a cool browser music player...be creative!
+## Features
 
-Feel free to play with the web demo above!
+- **Terminal-like Interaction**: Users can input commands to navigate the portfolio.
+- **Fetchsum Command**: A special command `fetchsum` is implemented to quickly fetch a summary of my professional profile.
+- **Responsive Design**: Ensuring a seamless experience across all devices.
 
-## 📸 Showcase
+## Commands
 
-<p align="center">
-<img src="./demo/demo.gif" width="600"><br>
-<strong>LiveTerm with different themes</strong>
-</p>
+- `fetchsum`: Retrieves a summary of my professional experiences, personal projects, and skills.
+- `help`: Lists all the available commands within the terminal portfolio.
+- `clear`: Clears the current terminal screen.
+- `about`: Displays information about my background and interests.
+- `projects`: Provides a list of my personal and academic projects with descriptions.
+- `contact`: Shows how to get in touch with me for collaborations or inquiries.
 
-<p align="center">
-<img src="./demo/cveinnt.png" width="600"><br>
-<strong><a href="https://cveinnt.com" target=_blank>my personal website</a></strong>
-</p>
+## How to Use
 
-## 🚀 Ship your LiveTerm site in less than 5 minutes
+1. Open the portfolio terminal.
+2. Type `help` for a list of available commands.
+3. Use `fetchsum` to get a quick summary.
+4. Explore other commands to learn more about my work and skills.
 
-LiveTerm requires the `yarn` package manager. You can install `yarn` [here](https://classic.yarnpkg.com/lang/en/docs/install/).
+## Technical Details
 
-Simply run the following commmand in your terminal:
+- **Frontend**: The interface is built using modern web technologies and follows the design patterns of a Unix-like terminal.
+- **Fetchsum Implementation**: A custom script is used to serve the summary information, utilizing server-side rendering for optimal performance.
+- **Inspiration**: This project is based on the open-source template from [LiveTerm](https://github.com/Cveinnt/LiveTerm), with significant modifications and personal touches to suit my portfolio needs.
 
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/Cveinnt/LiveTerm/main/install/install.sh)"
-```
+## Local Setup
 
-This will install LiveTerm to the current directory. You can start building your website with:
+To run this portfolio locally:
 
-```bash
-cd LiveTerm && yarn dev
-```
+1. Clone the repository.
+2. Navigate to the project directory.
+3. Run `npm install` to install dependencies.
+4. Start the development server with `npm start`.
+5. Visit `http://localhost:3000` in your browser to view the portfolio.
 
-Start editing `config.json` and try saving and see the updated changes!
+## Acknowledgements
 
-Alternatively, you can clone this repository to a location of your choosing
+Special thanks to [LiveTerm](https://github.com/Cveinnt/LiveTerm) for providing the initial codebase that inspired this personalized rendition of a developer's portfolio.
 
-```bash
-git clone https://github.com/Cveinnt/LiveTerm.git && cd LiveTerm
-```
+## Contact Me
 
-Then install dependencies and start developing there:
+For collaboration or any queries, feel free to reach out through the contact command in the terminal or visit the `contact` section of this portfolio.
 
-```bash
-yarn install && yarn dev
-```
+Enjoy exploring my terminal-style portfolio!
 
-### Docker Usage
-
-First, clone the project and edit `config.json` to your liking. Then run the following to start the container in the background:
-
-```shell
-docker-compose up -d
-```
-
-If you **know** what you were doing, you can also try changing `Dockerfile` & `docker-compose.yml`!
-Learn more about Docker [here](https://docs.docker.com/get-started/overview/ 'here').
-
-## 📄 Configuration
-
-### Basic Configuration
-
-90% of LiveTerm's configurations are done through the `config.json` file.
-
-```javascript
-{
-  "readmeUrl": // create a Github README and link it here!
-  "title": // title of the website
-  "name": // your name, included in 'about' command
-  "ascii": // ascii art to display
-  "social": {
-    "github": // your handle
-    "linkedin": // your handle
-  },
-  "email": // your email
-  "ps1_hostname": "liveterm" // hostname in prompt
-  "ps1_username": "visitor", // username in prompt
-  "resume_url": "../resume.pdf", // path to your resume
-  "non_terminal_url": "W",
-  "colors": {
-    "light": {
-      ...
-    },
-    "dark": {
-      ... // you can use existing templates in themes.json or use your own!
-    }
-  }
-}
-```
-
-Feel free to change it as you see fit!
-
-### Themes
-
-You can find several pre-configured themes in `themes.json`, and you can replace the colors in `config.json` with the theme color you like! The themes are based on the themes on [this website](https://glitchbone.github.io/vscode-base16-term/#/).
-
-For a better preview of the themes, checkout the images in the `demo` folder.
-
-### Favicons
-
-Favicons are located in `public/`, along with the other files you may want to upload to your website. I used this [website](https://www.favicon-generator.org/) to generate favicons.
-
-### Banner
-
-You may also want to change the output of the `banner` command. To do that, simply paste your generated banner in `src/utils/bin/commands.ts`. I used this [website](https://manytools.org/hacker-tools/ascii-banner/) to generate my banner.
-
-### Advanced Configuration
-
-If you want to further customize your page, feel free to change the source code to your liking!
-
-## 🌐 Deploy on Vercel
-
-The easiest way to deploy a Next.js app is to use the [Vercel Platform](https://vercel.com/) from the creators of Next.js.
-
-You can install `vercel` cli and follow the instruction [here](https://vercel.com/docs/concepts/deployments/overview).
-
-You can also connect your github account to vercel and have vercel automatically deploy the github repository for you.
-
-## Credit
-
-Based on M4TT72's awesome [Terminal](https://github.com/m4tt72/terminal).
